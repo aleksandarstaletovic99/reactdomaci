@@ -5,7 +5,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 import {Link} from 'react-router-dom'
 import {SidebarData} from './SidebarData'
 
-function NavBar({cartNum,iznos}) {
+function NavBar({brRez,iznos}) {
     const [sidebar,setSidebar]=useState(false);
     const showSidebar=()=>setSidebar(!sidebar)
     return (
@@ -39,7 +39,7 @@ function NavBar({cartNum,iznos}) {
             <br/>
             <pre>     Ukupan broj rezervacija:</pre>
             <br/>
-            <p className='br-rez'>{cartNum}</p>
+            <p className='br-rez'>{brRez}</p>
 
             <pre>     Ukupan iznos:</pre>
             <br/>

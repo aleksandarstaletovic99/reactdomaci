@@ -16,7 +16,7 @@ function App() {
   const notify=()=>{
     toast('Nas bioskop se nalazi u bulevaru Zorana Djindjica broj 100');
 }
-  const [cartNum, setCartNum] = useState(0);
+  const [brRez, setbrRez] = useState(0);
   const [iznos, setIznos] = useState(0);
   const [nekiFilmovi, setNekiFilmovi] = useState([
     {
@@ -115,7 +115,7 @@ function App() {
     
   }
   function addFilm(title,price,id){
-    setCartNum(cartNum+1);
+    setbrRez(brRez+1);
     setIznos(iznos+price);
     filmovi.forEach((fil)=>{
       if(fil.id===id){
@@ -126,8 +126,8 @@ function App() {
       refreshFilm();
   }
   function deleteFilm(title,price,id){
-    if(cartNum>0)
-    setCartNum(cartNum-1);
+    if(brRez>0)
+    setbrRez(brRez-1);
     if(iznos>0)
     setIznos(iznos-price);
     filmovi.forEach((fil)=>{
@@ -139,7 +139,7 @@ function App() {
   }
   return(
     <BrowserRouter className="App">
-        <NavBar cartNum={cartNum} iznos={iznos}>
+        <NavBar brRez={brRez} iznos={iznos}>
         
         </NavBar>
     <Routes>
