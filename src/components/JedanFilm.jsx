@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-function JedanFilm({film}) {
+function JedanFilm({film,rezervisi,otkazi}) {
    
     return (
             
@@ -18,8 +18,8 @@ function JedanFilm({film}) {
             </div>
             
             
-            <button className="dugme" >Rezervisi</button>
-            <button className="dugme" >Otkazi rezervaciju</button>
+            <button className="dugme"  onClick={()=>rezervisi(film.title,film.price,film.id)}>Rezervisi</button>
+            <button className="dugme" onClick={()=>otkazi(film.title,film.price,film.id)}>Otkazi rezervaciju</button>
             
             <h4>Broj karata koje ste rezervisali za ovaj film:{film.amount}
             <br/>

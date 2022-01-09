@@ -4,6 +4,7 @@ import Filmovi from './components/Filmovi';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import {useState} from 'react';
 function App() {
+  const [cartNum, setCartNum] = useState(0);
   const [filmovi,setFilmovi] = useState([
     {
       id: 1,
@@ -48,11 +49,20 @@ function App() {
     },
    
   ]);
+  function addFilm(title,price,id){
+    setCartNum(cartNum+1);
+    
+  }
+  function deleteFilm(title,price,id){
+    if(cartNum>0)
+    setCartNum(cartNum-1);
+    
+  }
   return(
     <BrowserRouter className="App">
-        <NavBar ></NavBar>
+        <NavBar cartNum={cartNum}></NavBar>
     <Routes>
-      <Route path="/" element={<Filmovi filmovi={filmovi}/>} />
+      <Route path="/" element={<Filmovi filmovi={filmovi} rezervisi={addFilm} otkazi={deleteFilm}/>} />
       <Route path="/cart"/>
       <Route path="/slike"/>
     </Routes>
