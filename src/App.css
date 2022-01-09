@@ -90,3 +90,89 @@
 span {
   margin-left: 16px;
 }
+
+.br-rez {
+  
+  color: rgb(14, 1, 1);
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+}
+
+.svi-filmovi {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  padding-left: 5px;
+ 
+  margin-right: 100px;
+  margin-left: 50px;
+  
+  
+}
+
+.film {
+  border-style: groove;
+  border-width: 5px;
+  border-color: rgb(32, 184, 158);
+  border-radius: 10px;
+  margin-bottom: 50px;
+  max-width: 210px;
+  
+  margin-inline-start: 100px;
+  
+  margin: 10;
+  
+}
+
+.card-img-top {
+  height: 200px;
+  width: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+.film-body {
+  margin: 10px;
+}
+
+.dugme {
+  background-color: cornflowerblue;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 3px;
+  border-radius: 3px;
+  border-width: 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rezervacije {
+  display: grid;
+  justify-content: space-between;
+  margin: 20px;
+  
+}
+
+.film-fil {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(211, 211, 211);
+  border-radius: 10px;
+  max-width: 900px;
+}
+

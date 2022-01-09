@@ -1,5 +1,6 @@
 import NavBar from './components/NavBar';
 import './App.css';
+import Filmovi from './components/Filmovi';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import {useState} from 'react';
 function App() {
@@ -51,7 +52,7 @@ function App() {
     <BrowserRouter className="App">
         <NavBar ></NavBar>
     <Routes>
-      <Route path="/"/>
+      <Route path="/" element={<Filmovi filmovi={filmovi}/>} />
       <Route path="/cart"/>
       <Route path="/slike"/>
     </Routes>
