@@ -15,7 +15,7 @@ export const SidebarData=[
     },
     {
         title:'Rezervacije',
-        path:'/Cart',
+        path:'/Rezervacije',
         icon:<ImFilm/>,
         cName:'nav-text'
     },

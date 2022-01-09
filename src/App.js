@@ -1,6 +1,7 @@
 import NavBar from './components/NavBar';
 import './App.css';
 import Filmovi from './components/Filmovi';
+import Rezervacije from './components/Rezervacije';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import {useState} from 'react';
 import slika1 from './slike/slika1.jpg';
@@ -70,7 +71,7 @@ function App() {
         <NavBar cartNum={cartNum} iznos={iznos}></NavBar>
     <Routes>
       <Route path="/" element={<Filmovi filmovi={filmovi} rezervisi={addFilm} otkazi={deleteFilm}/>} />
-      <Route path="/cart"/>
+      <Route path="/rezervacije" element={<Rezervacije filmovi={filmovi}/>} />
       <Route path="/slike"/>
     </Routes>
     </BrowserRouter>
