@@ -9,6 +9,7 @@ import slika3 from './slike/slika3.jpg';
 import slika4 from './slike/slika4.jpg';
 function App() {
   const [cartNum, setCartNum] = useState(0);
+  const [iznos, setIznos] = useState(0);
   const [filmovi,setFilmovi] = useState([
     {
       id: 1,
@@ -55,16 +56,18 @@ function App() {
   ]);
   function addFilm(title,price,id){
     setCartNum(cartNum+1);
+    setIznos(iznos+price);
     
   }
   function deleteFilm(title,price,id){
     if(cartNum>0)
     setCartNum(cartNum-1);
-    
+    if(iznos>0)
+    setIznos(iznos-price);
   }
   return(
     <BrowserRouter className="App">
-        <NavBar cartNum={cartNum}></NavBar>
+        <NavBar cartNum={cartNum} iznos={iznos}></NavBar>
     <Routes>
       <Route path="/" element={<Filmovi filmovi={filmovi} rezervisi={addFilm} otkazi={deleteFilm}/>} />
       <Route path="/cart"/>
