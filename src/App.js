@@ -9,7 +9,13 @@ import slika1 from './slike/slika1.jpg';
 import slika2 from './slike/slika2.jpg';
 import slika3 from './slike/slika3.jpg';
 import slika4 from './slike/slika4.jpg';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 function App() {
+  const notify=()=>{
+    toast('Nas bioskop se nalazi u bulevaru Zorana Djindjica broj 100');
+}
   const [cartNum, setCartNum] = useState(0);
   const [iznos, setIznos] = useState(0);
   const [filmovi,setFilmovi] = useState([
@@ -59,22 +65,36 @@ function App() {
   function addFilm(title,price,id){
     setCartNum(cartNum+1);
     setIznos(iznos+price);
-    
+    filmovi.forEach((fil)=>{
+      if(fil.id===id){
+        fil.amount++;
+        fil.money=fil.money+fil.price;
+      }
+      });
   }
   function deleteFilm(title,price,id){
     if(cartNum>0)
     setCartNum(cartNum-1);
     if(iznos>0)
     setIznos(iznos-price);
+    filmovi.forEach((fil)=>{
+      if(fil.id===id){
+        fil.amount--;
+        fil.money=fil.money-fil.price;
+      }
+      });
   }
   return(
     <BrowserRouter className="App">
-        <NavBar cartNum={cartNum} iznos={iznos}></NavBar>
+        <NavBar cartNum={cartNum} iznos={iznos}>
+        
+        </NavBar>
     <Routes>
       <Route path="/" element={<Filmovi filmovi={filmovi} rezervisi={addFilm} otkazi={deleteFilm}/>} />
       <Route path="/rezervacije" element={<Rezervacije filmovi={filmovi}/>} />
       <Route path="/slike" element={<Slike/>}/>
     </Routes>
+    <button className='dugme' onClick={notify}>Adresa</button>
     </BrowserRouter>
 
   );
