@@ -3,6 +3,10 @@ import './App.css';
 import Filmovi from './components/Filmovi';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import {useState} from 'react';
+import slika1 from './slike/slika1.jpg';
+import slika2 from './slike/slika2.jpg';
+import slika3 from './slike/slika3.jpg';
+import slika4 from './slike/slika4.jpg';
 function App() {
   const [cartNum, setCartNum] = useState(0);
   const [filmovi,setFilmovi] = useState([
@@ -15,7 +19,7 @@ function App() {
         amount: 0,
         money:0,
         
-        img:0
+        img:  <img className='card-img-top'src={slika1} />
     },
     {
       id: 2,
@@ -25,7 +29,7 @@ function App() {
         price: 200,
         amount: 0,
         money:0,
-        img:0 
+        img:  <img className='card-img-top'src={slika2} />
     },
     {
       id: 3,
@@ -35,7 +39,7 @@ function App() {
         price: 300,
         amount: 0,
         money:0,
-        img: 0
+        img:  <img className='card-img-top'src={slika3} />
     },
     {
       id: 4,
@@ -45,7 +49,7 @@ function App() {
         price: 300,
         amount: 0,
         money:0,
-        img:  0
+        img:  <img className='card-img-top'src={slika4} />
     },
    
   ]);
