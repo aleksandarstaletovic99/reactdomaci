@@ -1,9 +1,13 @@
-
+import NavBar from './components/NavBar';
 import './App.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
   return(
-<h1>dasa</h1>
+    <BrowserRouter className="App">
+        <NavBar ></NavBar>
+    </BrowserRouter>
+
   );
     
   
