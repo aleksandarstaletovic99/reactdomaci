@@ -175,4 +175,25 @@ a {
   border-radius: 10px;
   max-width: 900px;
 }
+.roditelj div{
+  width: 30%;
+  margin: 50px;
+  
+  
+}
+.roditelj{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.imag{
+  border-radius: 15px;
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+  border:3px;
+  
+}
 

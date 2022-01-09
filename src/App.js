@@ -2,6 +2,7 @@ import NavBar from './components/NavBar';
 import './App.css';
 import Filmovi from './components/Filmovi';
 import Rezervacije from './components/Rezervacije';
+import Slike from './components/Slike';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import {useState} from 'react';
 import slika1 from './slike/slika1.jpg';
@@ -72,7 +73,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Filmovi filmovi={filmovi} rezervisi={addFilm} otkazi={deleteFilm}/>} />
       <Route path="/rezervacije" element={<Rezervacije filmovi={filmovi}/>} />
-      <Route path="/slike"/>
+      <Route path="/slike" element={<Slike/>}/>
     </Routes>
     </BrowserRouter>
 
