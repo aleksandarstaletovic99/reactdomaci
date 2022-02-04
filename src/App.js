@@ -82,7 +82,7 @@ function App() {
         price: 200,
         amount: 0,
         money:0,
-        img:  <img className='card-img-top'src={slika2} />
+        img:  <img className='card-img-top'src={slika3} />
     },
     {
       id: 3,
@@ -92,7 +92,7 @@ function App() {
         price: 300,
         amount: 0,
         money:0,
-        img:  <img className='card-img-top'src={slika3} />
+        img:  <img className='card-img-top'src={slika2} />
     },
     {
       id: 4,
